@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Personal Website</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Add full version of jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <style>
+    /* Add custom styles */
+  body {
+    background-color: #1c1c27;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    background-color: #292b3d;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #292b3d;
+    color: #fff;
+  }
+
+  /* Navbar styles */
+  .navbar {
+    background-color: #292b3d;
+  }
+
+  .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .navbar-nav .nav-link {
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #ffc107;
+  }
+
+  /* Section styles */
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section h2 {
+    color: #ffc107;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Work experience styles */
+  .work-experience {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #292b3d;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .work-experience h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-experience p {
+    color: #ccc;
+  }
+
+  .project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .project h3 {
+    color: #ffc107;
+    margin-bottom: 0.5rem;
+  }
+
+  .project p {
+    color: #ccc;
+  }
+
+  .project img {
+    width: 150px;
+    margin-right: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .project .github-link {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .project .github-link:hover {
+    color: #fff;
+  }
+
+
+    .profile img {
+      width: 300px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <p>Web Developer &amp; Designer</p>
+  </header>
+  
+  <!-- Add Bootstrap navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Your Name</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work-experience">Work Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12" id="about">
+          <div class="profile text-center">
+            <img src="profile.jpg" alt="Your Name">
+            <div class="intro">
+              <h2>About Me</h2>
+              <p>Hi there! I'm a passionate web developer with a keen interest in creating user-friendly and visually appealing websites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-md-12" id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Responsive Design</li>
+          <li>UI/UX Design</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" id="work-experience">
+        <h2>Work Experience</h2>
+        <div class="work-experience">
+          <h3>Web Developer - ABC Tech</h3>
+          <p>Worked on developing and maintaining company websites using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="work-experience">
+          <h3>Front-End Designer - XYZ Designs</h3>
+          <p>Collaborated with design and development teams to create visually appealing and user-friendly websites.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" id="projects">
+          <h2>Projects</h2>
+          <div class="project">
+            <h3>Project 1</h3>
+            <p>A brief description of your first project.</p>
+            <img src="profile.jpg" alt="Project 1" />
+            <a href="https://github.com/your-username/project1" class="github-link" target="_blank">GitHub</a>
+          </div>
+          <div class="project">
+            <h3>Project 2</h3>
+            <p>A brief description of your second project.</p>
+            <img src="profile.jpg" alt="Project 2" />
+            <a href="https://github.com/your-username/project2" class="github-link" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+  <footer>
+    <p>&copy; 2023 Your Name. All rights reserved.</p>
+  </footer>
+  <!-- Add Bootstrap JS and Popper.js links -->
+  <!-- Add Bootstrap JS and Popper.js links -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom script -->
+  <script>
+    $(document).ready(function() {
+      $('a.nav-link').on('click', function(event) {
+        event.preventDefault();
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top
+          }, 800);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
