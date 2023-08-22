@@ -21,6 +21,21 @@
     color: #fff;
     text-align: center;
     padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    z-index: 1000;
+
+  }
+
+  h2 {
+    font-weight: bold;
+  }
+
+  body {
+    padding-top: 80px;
   }
 
   footer {
@@ -33,11 +48,25 @@
   /* Navbar styles */
   .navbar {
     background-color: #292b3d;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    z-index: 1000;
   }
 
   .navbar-brand {
-    color: #fff;
+    display: flex;
+    flex-direction: column;
     font-weight: bold;
+  }
+
+  .navbar-brand .navbar-subtitle {
+    font-size: 0.75rem;
+    color: #ccc;
+    line-height: 1;
+    font-weight: normal;
   }
 
   .navbar-nav .nav-link {
@@ -60,7 +89,7 @@
   }
 
   /* Work experience styles */
-  .work-experience {
+  /* .work-experience {
     margin-bottom: 2rem;
     padding: 1.5rem;
     background-color: #292b3d;
@@ -75,8 +104,36 @@
 
   .work-experience p {
     color: #ccc;
+  } */
+
+  .work-experience {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #292b3d;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
+  .work-experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+
+  .work-experience-header h3 {
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  .work-experience-date {
+    color: #ccc;
+    font-size: 0.85rem;
+  }
+
+  .work-experience p {
+    color: #ccc;
+  }
   .project {
     display: flex;
     align-items: center;
@@ -113,19 +170,33 @@
     .profile img {
       width: 300px;
       border-radius: 50%;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+    hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color:#ccc;
+  height: 1px;
+}
   </style>
 </head>
 <body>
-  <header>
+  <!-- <header>
     <h1>Your Name</h1>
     <p>Web Developer &amp; Designer</p>
-  </header>
+  </header> -->
   
   <!-- Add Bootstrap navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Your Name</a>
+      <a class="navbar-brand" href="#">
+        Dylan Epstein-Gross
+        <div class="navbar-subtitle">Software Engineer, Data Scientist &amp; ML Researcher</div>
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -135,7 +206,7 @@
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#education">Education</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#work-experience">Work Experience</a>
@@ -143,69 +214,259 @@
           <li class="nav-item">
             <a class="nav-link" href="#projects">Projects</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <body>
   <div class="container mt-4">
-    <div class="row">
-        <div class="col-md-12" id="about">
+    <div class="row justify-content-md-center">
+        <div class="col-md-6" id="about">
           <div class="profile text-center">
-            <img src="profile.jpg" alt="Your Name">
+            <img src="profile.jpg" alt="Dylan Epstein-Gross">
             <div class="intro">
               <h2>About Me</h2>
-              <p>Hi there! I'm a passionate web developer with a keen interest in creating user-friendly and visually appealing websites.</p>
+              <br>
+              <p>Hi there! I'm a Princeton computer science student interested in researching and engineering for social good, 
+                particularly through AI, machine learning, and robotics.
+              </p>
+              <p> I've loved solving problems with math and computation ever since I first printed "Hello world" in the eighth grade. Now, after
+                years of hard work, I've garnered both a strong theoretical background in quantitative reasoning, and a wealth of practical
+                experience both through applied research and engineering roles. I'm excited to keep developing my skills in software
+                engineering and machine learning, and keep applying them to fields from robotics to sustainability and even finance. </p>
+              <p> Check out my experience below, or through my <a href="resume.pdf"> resume </a> or <a href="https://www.linkedin.com/in/dylan-epstein-gross-bb17261a5/"> LinkedIn</a> !</p>
+
             </div>
           </div>
         </div>
       </div>
+
+    <hr size="30">
+    
     <div class="row">
-      <div class="col-md-12" id="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript</li>
-          <li>Responsive Design</li>
-          <li>UI/UX Design</li>
-        </ul>
+      <div class="col-md-12" id="education">
+        <h2>Education</h2>
+        <div class="work-experience">
+          <div class="work-experience-header">
+            <h3>Princeton University | B.S.E in Computer Science </h3>
+            <p class="work-experience-date"> Princeton, NJ, Aug. 2022 - May 2025</p>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <p> GPA: 4.0 </p>
+          <p> Relevant coursework: Data Structures and Algorithms (A+), Machine Learning (A+), Computer Systems (A+), Computer Architecture,
+            Advanced Software Engineering Techniques, Fundamentals of Statistics (A+), Probability Theory, Discrete Mathematics (A+),
+            Advanced Vector Calculus (A+), Advanced Linear Algebra (A+), Engineering in the Modern World (A+) </p>
+          <p> Activities: Data Science Club Team Lead, Princeton Science Olympiad Executive Board, IgniteSTEM Events Coordinator,
+            Undergraduate Student Government Data Analytics Committee, Princeton Quiz Bowl Team, Lobster Improv Comedy Club, Princeton University Climbing Team </p>
+          <p> Awards and Honors: George B. Wood Legacy Sophomore Prize (top two students in class) </p>
+            </div>
+            <div class="col-md-4">
+              <img src="princeton.svg" alt="Princeton" class="img-fluid rounded">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="work-experience">
+        <div class="work-experience-header">
+          <h3>James S. Rickards High School | IB Diploma Programme </h3>
+          <p class="work-experience-date"> Tallahassee, FL, Aug. 2018 - May 2022</p>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <p> GPA: 4.0, SAT: 1580 </p>
+        <p> Relevant coursework: IB Mathematics (7/7), IB Physics (7/7), AP Calculus BC (5/5), AP Computer Science A (5/5),
+          AP Physics 1 (5/5), AP Physics C (5/5), AP Statistics (5/5)  </p>
+        <p> Activities: Mu Alpha Theta Math Club President, Language Club President, Programming Club President, National Honor
+          Society Vice President, Science Olympiad Club Secretary </p>
+        <p> Awards and Honors: 2022 U.S. Presidential Scholar (one of 161 students across the country), Florida Sunshine State Scholar,
+          National Merit Scholar,
+          AP Scholar with Distinction, 4-time AIME Qualifier with Distinguished Honor Roll, USA Computing Olympiad Gold Rank, USA Physics
+        Olympiad Honorable Mention, Silver Presidential Volunteer Service Award </p>
+          </div>
+          <div class="col-md-4">
+            <img src="rickards.png" alt="Rickards" class="img-fluid rounded">
+          </div>
+        
       </div>
     </div>
+  
+
+    <hr size="30">
+
     <div class="row">
       <div class="col-md-12" id="work-experience">
         <h2>Work Experience</h2>
         <div class="work-experience">
-          <h3>Web Developer - ABC Tech</h3>
-          <p>Worked on developing and maintaining company websites using HTML, CSS, and JavaScript.</p>
+          <div class="work-experience-header">
+            <h3>Machine Learning Engineer Intern | Ticket Wallet </h3>
+            <p class="work-experience-date"> Princeton, NJ (remote), June 2023 - Aug. 2023</p>
+          </div>
+          <p>Working with startup CTO and small engineering team to develop Selenium web-scraper 
+            and reinforcement learning pipeline for automated dynamic ticket pricing with PyTorch, 
+            Apache Spark, AWS Sagemaker</p>
         </div>
         <div class="work-experience">
-          <h3>Front-End Designer - XYZ Designs</h3>
-          <p>Collaborated with design and development teams to create visually appealing and user-friendly websites.</p>
+          <div class="work-experience-header">
+            <h3>Deep Learning Research Intern | University of Washington </h3>
+            <p class="work-experience-date"> Seattle, WA, June 2023 - Aug. 2023</p>
+          </div>
+          <p>Research intern for Prof. Manucharyan, designed Tensorflow models for predicting Sea Surface Temp. values -- full data pipeline & novel Generative Adversarial ConvLSTM used to obtain 60% decrease in loss from baseline methods
+          </p>
+        </div>
+        <div class="work-experience">
+          <div class="work-experience-header">
+            <h3>Research Assistant | Princeton Intelligent Robot Motion Lab </h3>
+            <p class="work-experience-date"> Princeton, NJ, Feb. 2023 - Present</p>
+          </div>
+          <p>Working with PhD student to evaluate monocular depth perception algorithms for CrazyFlie & Tello quadcopters
+          </p>
+        </div>
+        <div class="work-experience">
+          <div class="work-experience-header">
+            <h3>Statistics & R Tutor | McGraw Center for Teaching and Learning </h3>
+            <p class="work-experience-date"> Princeton, NJ, Feb. 2023 - Present</p>
+          </div>
+          <p>Individual tutoring and group study halls for students in Fundamentals of Statistics and R Programming classes
+          </p>
+        </div>
+        <div class="work-experience">
+          <div class="work-experience-header">
+            <h3>Undergraduate Course Assistant | Princeton Computer Science Department </h3>
+            <p class="work-experience-date"> Princeton, NJ, Feb. 2023 - May 2023</p>
+          </div>
+          <p>Grade programming assignments for Data Structures & Algorithms class, debugging & providing detailed feedback
+          </p>
+        </div>
+        <div class="work-experience">
+          <div class="work-experience-header">
+            <h3>Data Science Intern | QuantCap </h3>
+            <p class="work-experience-date"> Princeton, NJ, Feb. 2023 - May 2023</p>
+          </div>
+          <p>Winter 2023 Intern, worked in small group to develop real-time Flask web-scraper and 1-D CNN Tensorflow model for short-term stock market prediction and portfolio allocation; presented overall returns of >30% to company CEO
+          </p>
+        </div>
+        <div class="work-experience">
+          <div class="work-experience-header">
+            <h3>Junior Software Engineer | The Daily Princetonian </h3>
+            <p class="work-experience-date"> Princeton, NJ, Sept. 2022 - Present</p>
+          </div>
+          <p>Working with team of undergraduates to develop new features of newspaper’s MERN-stack app, as well as produce new mobile React Native app with Expo Go. Also write weekly crossword puzzles for newspaper’s Puzzles team.
+          </p>
+        </div>
+        <div class="work-experience">
+          <div class="work-experience-header">
+            <h3>Tech Lead | Princeton Hack4Impact </h3>
+            <p class="work-experience-date"> Princeton, NJ, Sept. 2022 - Present</p>
+          </div>
+          <p>Leading small team of students to develop MERN-stack data visualization platform for NJ Tree Foundation
+            Frontend development in React Leaflet and backend managing PostgreSQL database
+          </p>
+        </div>
+        <div class="work-experience">
+          <div class="work-experience-header">
+            <h3>Research Intern | Florida State University Optimal Robotics Lab </h3>
+            <p class="work-experience-date"> Tallahassee, FL, Oct. 2019 - June 2022</p>
+          </div>
+          <p>Research intern for Professor Christian Hubicki, working with PhD students to study risk-based trajectory optimization algorithms in bipedal locomotion -- particular emphasis on regression & feedback control in Python and MATLAB.
+            Co-author on paper submitted to International Conference on Robotics and Automation (ICRA) - “Locomotion as a Risk-mitigating Behavior in Uncertain Environments: A Rapid Planning and Few-shot Failure Adaptation Approach.”
+          </p>
         </div>
       </div>
     </div>
+    
+    <hr size="30">
+
     <div class="row">
         <div class="col-md-12" id="projects">
           <h2>Projects</h2>
-          <div class="project">
-            <h3>Project 1</h3>
-            <p>A brief description of your first project.</p>
-            <img src="profile.jpg" alt="Project 1" />
-            <a href="https://github.com/your-username/project1" class="github-link" target="_blank">GitHub</a>
+          <br>
+          <div class="work-experience">
+            <div class="work-experience-header">
+              <h3>Pleistocene Park Sustainability Analysis</h3>
+              <p class="work-experience-date">Apr. 2023 - Present</p>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <p>Framework for analyzing the feasibility of the Pleistocene Park nature reserve at mitigating global warming, developed
+                  in collaboration with Professor Andrea DiGiorgio. Project includes full data pipeline from raw geographic data in R and Python, 
+                maximum-entropy species distribution modelling with state-of-the-art Maxent tool, Generalized Linear Model trained on
+                pseudoabsences and pseudopresences, and outputs of AnyLogic system dynamics model when using these predicted populations
+              as inputs. Results to be presented as poster at Student Conference on Conservation Science (SCCS-NY).</p>
+              </div>
+              <div class="col-md-4">
+                <a href="https://github.com/Dseg123/Pleistocene-Park-Analysis"> <img src="ppp.png" alt="Pleistocene Park Poster" width="300" class="img-fluid rounded" ></a>
+              </div>
+            </div>
           </div>
-          <div class="project">
-            <h3>Project 2</h3>
-            <p>A brief description of your second project.</p>
-            <img src="profile.jpg" alt="Project 2" />
-            <a href="https://github.com/your-username/project2" class="github-link" target="_blank">GitHub</a>
+          <div class="work-experience">
+            <div class="work-experience-header">
+              <h3>Sea Surface Temperature Interpolation</h3>
+              <p class="work-experience-date">June 2023 - Present</p>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <p>Framework for interpolating satellite sea surface temperature data under cloud cover, extended from summer research done with
+                  Professor Georgy Manucharyan and doctoral student Scott Martin at the University of Washington. Project includes full data pipeline
+                from raw satellite images, various deep learning models in TensorFlow trained to match unclouded images to clouded images, and client
+              that allows for evaluation of models against the baseline technique of "kriging". Results to be presented at Princeton's Summer of Learning
+            Symposium. </p>
+              </div>
+              <div class="col-md-4">
+                <a href="https://github.com/Dseg123/SST-Interpolation"> <img src="sst.png" alt="SST Model Diagram" width="300" class="img-fluid rounded" ></a>
+              </div>
+            </div>
+          </div>
+          <div class="work-experience">
+            <div class="work-experience-header">
+              <h3>Risk-Aware Obstacle Avoidance</h3>
+              <p class="work-experience-date">Jan. 2022 - June 2022</p>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <p>Framework for real-time quadcopter navigation and learning of multiple risk sources, extended from research done with Professor
+                  Christian Hubicki and doctoral student Jacob Hackett at Florida State University. Project includes high-dimensional spline regression model for learning risk
+                  mapping from successes and failures, quadratic programming direct collocation using that model as a constraint, and model-predictive control loop
+                  implementing those optimizations in real time on the drone. Results accepted by and presented at International Conference on Robotics and Automation.</p>
+              </div>
+              <div class="col-md-4">
+                <a href="https://dl.acm.org/doi/abs/10.1109/ICRA46639.2022.9812103"> <img src="icra.png" alt="ICRA Model Diagram" width="300" class="img-fluid rounded" ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 justify-content-md-right">
+            <p text-align="center">These are just a few -- many more fascinating projects can be found on my <a href="https://github.com/Dseg123">Github</a>!</p>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      <hr size="30">
+
+      <div class="row justify-content-md-center">
+        <div class="col-md-6" id="contact">
+          <div class="profile text-center">
+            <div class="intro">
+              <br>
+              <h2>Contact</h2>
+              <br>
+              <p>If you are looking for an ambitious and motivated engineer or researcher, with both theoretical and practical expertise, I would be honored to have the opportunity to connect with you. Please feel free to reach out to me for further discussion at <b>dylaneg@princeton.edu</b>. </p>
+              <br>
+            </div>
           </div>
         </div>
       </div>
       
   </div>
+  </body>
   <footer>
-    <p>&copy; 2023 Your Name. All rights reserved.</p>
+    <p>&copy; 2023 Dylan Epstein-Gross. All rights reserved.</p>
   </footer>
   <!-- Add Bootstrap JS and Popper.js links -->
   <!-- Add Bootstrap JS and Popper.js links -->
